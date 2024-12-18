@@ -16,7 +16,7 @@
       background-color: #3A5A40;
       padding: 10px 0;
       z-index: 1000;
-      font-weight: bold; /* Make the font bold in the navigation bar */
+      font-weight: bold; 
     }
 
     nav ul {
@@ -35,7 +35,7 @@
       color: #FFFFFF;
       text-decoration: none;
       font-size: 18px;
-      font-weight: bold; /* Ensure the links are bold */
+      font-weight: bold; 
     }
 
     nav ul li a:hover {
@@ -50,7 +50,7 @@
       text-align: center;
       margin-top: 100px;
       font-family: "Helvetica", Arial, sans-serif;
-      font-weight: bold; /* Ensure the heading is bold */
+      font-weight: bold; 
     }
 
     iframe {
