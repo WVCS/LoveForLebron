@@ -1,28 +1,81 @@
+
 <html>
-  <head>
-  </head>
-  <body>
-    <center>
-      <h3> Sigma Project </h3>
-      <iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/apgtw1ecf8ICI01hFMt48ewF1qLXHAsn0Xngw4aRYZx/embed?nosource"></iframe>
-      </body>
-
-</html>
-  
+<head>
   <style>
-  body {
-  background-color:#DAD7CD;
-}
+    body {
+      background-color: #DAD7CD;
+      margin: 0;
+      font-family: "Helvetica", Arial, sans-serif;
+    }
 
-h3 {
- color: #3A5A40;
-font-size: 50px;
-letter-spacing: 3px;
-  
-}
+    nav {
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #3A5A40;
+      padding: 10px 0;
+      z-index: 1000;
+      font-weight: bold; /* Make the font bold in the navigation bar */
+    }
 
-img {
-  width: 30%;
-  filter:invert(-1);
-}
-</style>
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold; /* Ensure the links are bold */
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content styles */
+    h3 {
+      color: #3A5A40;
+      font-size: 50px;
+      letter-spacing: 3px;
+      text-align: center;
+      margin-top: 100px;
+      font-family: "Helvetica", Arial, sans-serif;
+      font-weight: bold; /* Ensure the heading is bold */
+    }
+
+    iframe {
+      display: block;
+      margin: 20px auto;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="appPage.html">App Page</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <h3>Sigma Project</h3>
+  <iframe 
+    width="392" 
+    height="620" 
+    src="https://studio.code.org/projects/applab/apgtw1ecf8ICI01hFMt48ewF1qLXHAsn0Xngw4aRYZx/embed?nosource">
+  </iframe>
+</body>
+</html>
