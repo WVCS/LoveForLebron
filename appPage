@@ -1,11 +1,12 @@
-
 <html>
 <head>
   <style>
     body {
-      background-color: #DAD7CD;
       margin: 0;
       font-family: "Helvetica", Arial, sans-serif;
+      height: 200vh; 
+      background: linear-gradient(to bottom, #DAD7CD, #A3B18A);
+      transition: background 0.3s ease;
     }
 
     nav {
@@ -13,10 +14,12 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #3A5A40;
+      background: linear-gradient(to right, #3A5A40, #588157);
+      color: white;
       padding: 10px 0;
       z-index: 1000;
-      font-weight: bold; 
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
 
     nav ul {
@@ -35,14 +38,14 @@
       color: #FFFFFF;
       text-decoration: none;
       font-size: 18px;
-      font-weight: bold; 
+      font-weight: bold;
     }
 
     nav ul li a:hover {
       text-decoration: underline;
     }
 
-    /* Main content styles */
+    
     h3 {
       color: #3A5A40;
       font-size: 50px;
@@ -50,7 +53,7 @@
       text-align: center;
       margin-top: 100px;
       font-family: "Helvetica", Arial, sans-serif;
-      font-weight: bold; 
+      font-weight: bold;
     }
 
     iframe {
@@ -61,8 +64,8 @@
   </style>
 </head>
 <body>
-  <!-- Navigation bar -->
-  <nav>
+
+  <nav id="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="appPage.html">App Page</a></li>
@@ -70,12 +73,24 @@
     </ul>
   </nav>
 
-  <!-- Main content -->
+
   <h3>Sigma Project</h3>
   <iframe 
     width="392" 
     height="620" 
     src="https://studio.code.org/projects/applab/apgtw1ecf8ICI01hFMt48ewF1qLXHAsn0Xngw4aRYZx/embed?nosource">
   </iframe>
+
+  <script>
+    
+    window.addEventListener("scroll", function() {
+      const scrollPosition = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;    
+      const scrollPercentage = scrollPosition / maxScroll;     
+      document.body.style.background = `linear-gradient(to bottom, #DAD7CD, rgba(163, 177, 138, ${scrollPercentage + 0.5}))`;
+      const navbar = document.getElementById("navbar");
+      navbar.style.background = `linear-gradient(to right, rgba(58, 90, 64, ${1 - scrollPercentage}), rgba(88, 129, 87, ${scrollPercentage + 0.5}))`;
+    });
+  </script>
 </body>
 </html>
