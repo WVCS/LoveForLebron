@@ -4,7 +4,7 @@
     body {
       margin: 0;
       font-family: "Helvetica", Arial, sans-serif;
-      height: 200vh; 
+      height: 200vh;
       background: linear-gradient(to bottom, #DAD7CD, #A3B18A);
       transition: background 0.3s ease;
     }
@@ -14,7 +14,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(to right, #3A5A40, #588157);
+      background: linear-gradient(to left, #3A5A40, #588157, #3A5A40);
       color: white;
       padding: 10px 0;
       z-index: 1000;
@@ -45,7 +45,6 @@
       text-decoration: underline;
     }
 
-    
     h3 {
       color: #3A5A40;
       font-size: 50px;
@@ -64,7 +63,6 @@
   </style>
 </head>
 <body>
-
   <nav id="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -72,7 +70,6 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-
 
   <h3>Sigma Project</h3>
   <iframe 
@@ -82,14 +79,15 @@
   </iframe>
 
   <script>
-    
     window.addEventListener("scroll", function() {
       const scrollPosition = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;    
-      const scrollPercentage = scrollPosition / maxScroll;     
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const scrollPercentage = scrollPosition / maxScroll;
+
       document.body.style.background = `linear-gradient(to bottom, #DAD7CD, rgba(163, 177, 138, ${scrollPercentage + 0.5}))`;
+
       const navbar = document.getElementById("navbar");
-      navbar.style.background = `linear-gradient(to right, rgba(58, 90, 64, ${1 - scrollPercentage}), rgba(88, 129, 87, ${scrollPercentage + 0.5}))`;
+      navbar.style.background = `linear-gradient(to left, rgba(58, 90, 64, ${scrollPercentage + 0.5}), rgba(88, 129, 87, ${1 - scrollPercentage}), rgba(58, 90, 64, ${scrollPercentage + 0.5}))`;
     });
   </script>
 </body>
